@@ -1,11 +1,22 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
+import Task from './components/Task';
+import Form from './components/Form';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.body}>
+        <Text style={styles.headerText}>ToDo list</Text>
+        <ScrollView style={styles.items}> 
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        </ScrollView>        
+        </View>
+        <Form/>    
+      <StatusBar style="auto"/>
     </View>
   );
 }
@@ -13,8 +24,17 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+    backgroundColor: '#EDF6F6',
   },
+  headerText: {
+    fontSize:24, color:'#91CBE1', fontWeight:"bold"
+  },
+  items: {marginTop:25}, 
+  body:{
+    paddingTop:50, paddingHorizontal:18
+  },
+  tail:{
+    paddingBottom:50, paddingHorizontal:18
+  },
+  
 });
