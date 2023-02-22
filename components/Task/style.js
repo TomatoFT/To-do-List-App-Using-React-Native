@@ -1,12 +1,13 @@
 import { StyleSheet } from 'react-native'
+import color from '../contain/color';
+
 const styles = StyleSheet.create({
     item: {
-        color: 'black', backgroundColor: '#fff', flexDirection:'row', marginBottom:15, paddingVertical:10, 
+        color: 'black', backgroundColor: color.white, flexDirection:'row', marginBottom:15, paddingVertical:10, 
         paddingHorizontal:20, borderRadius:50, justifyContent:'space-between'
       },
-
       square : {
-        backgroundColor:'#9AECF6', width:40 , height:30,borderRadius:30, 
+        backgroundColor: color.primary, width:40 , height:30,borderRadius:30, 
         alignItems:'center', justifyContent:'center'
       },
       number: {

@@ -1,7 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, ScrollView } from 'react-native';
 import Task from './components/Task';
 import Form from './components/Form';
+import styles from './App.components.styles';
 
 export default function App() {
   return (
@@ -13,28 +14,22 @@ export default function App() {
         <Task />
         <Task />
         <Task />
-        </ScrollView>        
-        </View>
-        <Form/>    
-      <StatusBar style="auto"/>
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        <Task />
+        {/* <Form /> */}
+        </ScrollView>
+      {/* <StatusBar style="auto"/> */}
+      </View> 
+      <Form/>  
     </View>
+    
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#EDF6F6',
-  },
-  headerText: {
-    fontSize:24, color:'#91CBE1', fontWeight:"bold"
-  },
-  items: {marginTop:25}, 
-  body:{
-    paddingTop:50, paddingHorizontal:18
-  },
-  tail:{
-    paddingBottom:50, paddingHorizontal:18
-  },
-  
-});
+
